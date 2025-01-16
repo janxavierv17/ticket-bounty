@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { initialTickets } from "@/app/data";
 
 const TicketPage = async ({
@@ -9,7 +10,7 @@ const TicketPage = async ({
   const ticket = initialTickets.find((ticket) => ticket.id === ticketId);
 
   if (!ticket) {
-    return "Ticket not found";
+    return notFound();
   }
 
   return (

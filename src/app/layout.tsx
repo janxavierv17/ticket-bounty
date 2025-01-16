@@ -41,7 +41,7 @@ export default function RootLayout({
             </Link>
           </div>
         </nav>
-        <main className="bg-secondary/20 flex min-h-screen flex-1 flex-col overflow-y-auto overflow-x-hidden px-8 py-24">
+        <main className="bg-background/20 flex min-h-screen flex-1 flex-col overflow-y-auto overflow-x-hidden px-8 py-24">
           {children}
         </main>
       </body>
