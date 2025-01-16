@@ -1,6 +1,10 @@
 import { initialTickets } from "@/app/data";
 
-const TicketPage = async ({ params }: { params: { ticketId: string } }) => {
+const TicketPage = async ({
+  params,
+}: {
+  params: Promise<{ ticketId: string }>;
+}) => {
   const { ticketId } = await params;
   const ticket = initialTickets.find((ticket) => ticket.id === ticketId);
 
@@ -16,4 +20,5 @@ const TicketPage = async ({ params }: { params: { ticketId: string } }) => {
     </div>
   );
 };
+
 export default TicketPage;
